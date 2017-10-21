@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VUE</title>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+#logos {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -100px;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+}
+#logo {
+  display: block;
+  position: relative;
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
+  transform-style: preserve-3d;
+  transform: rotateX(0) rotateY(0) rotateZ(0);
+  -webkit-animation: rotatevue 5s infinite linear;
+  animation: rotatevue 5s infinite linear;
+}
+#img {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  -webkit-backface-visibility: visible;
+  -webkit-transform:  rotateY(0deg);
+  backface-visibility: visible;
+  transform: rotateY(0deg);
+}
+.zone {
+  font-size: 50px;
+  float: right;
+  position: relative;
+  top: -70px;
+  color: #41B883;
+  text-transform: uppercase;
+}
+@-webkit-keyframes rotatevue {
+  0% { -webkit-transform: rotateY(0) ;}
+  100% { -webkit-transform: rotateY(180deg) ;}
+}
+@keyframes rotatevue {
+  0% { transform: rotateY(0) ;}
+  100% { transform: rotateY(180deg) ;}
+}
+</style>
+</head>
+<body>
+<div id="logos">
+  <a id="logo" href="https://vue.by">
+    <img src="./vue.svg" id="img" alt="VUE JS">
+  </a>
+  <span class="zone">.by</span>
+</div>
+</body>
+</html>
